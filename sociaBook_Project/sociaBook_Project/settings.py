@@ -30,6 +30,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 LOGOUT_REDIRECT_URL = 'frontpage'
+LOGIN_REDIRECT_URL = 'feed'
 LOGIN_URL = 'login'
 
 
@@ -44,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'apps.core',
-    'apps.userprofile'
+    'apps.userprofile',
+    'apps.feed',
 ]
 
 MIDDLEWARE = [
