@@ -29,6 +29,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGOUT_REDIRECT_URL = 'frontpage'
+LOGIN_URL = 'login'
+
 
 # Application definition
 
@@ -56,12 +59,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'sociaBook_Project.urls'
 
-TEMPLATE_DIR = os.path.join(BASE_DIR,"templates.core")
+
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -6,7 +6,7 @@ def frontpage(request):
     return render(request, 'core/frontpage.html')
 
 
-def signup(request):
+def sign_up(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
 
@@ -16,9 +16,9 @@ def signup(request):
 
             return redirect('frontpage')
 
-        else:
-            form = UserCreationForm()
+    else:
+        form = UserCreationForm()
 
-        return render(request, 'core/signup.html', {'form' : form})
+    return render(request, 'core/sign_up.html', {'form' : form})
 
 
